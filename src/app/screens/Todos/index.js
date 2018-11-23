@@ -1,0 +1,53 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { View } from 'react-native';
+import { connect } from 'react-redux';
+
+import { actionCreator } from '../redux/todos/actions'
+import Title from '../components/Title'
+import Input from '../components/Input'
+import List from '../components/List'
+import Footer from '../components/Footer'
+
+class Todos extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Title>Todo List</Title>
+        <Input
+          placeholder={'Enter a Todo!'}
+          onSubmit={this.props.addTodo}
+        />
+        <View style={styles.divider}/>
+        <List
+          todos={this.props.todos}
+          onDelete={this.removeItem}
+          onToggle={this.props.toggleTodo}
+        />
+        <View style={styles.divider} />
+        <Footer onRemoveCompleted={this.removeCompleted} />
+      </View>
+    )
+  }
+}
+
+Todos.propTypes = {
+  todos: PropTypes.array.isRequired,
+  addTodo: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
+  removeCompleted: PropTypes.func.isRequired,
+}
+
+const mapsStateToProps = state => ({
+  todos: state.todos.todos
+});
+
+const mapDispatchToProps = dispatch => ({
+  addTodo: todo => dispatch(actionCreator.addTodoAction(todo)),
+  removeTodo: id => dispatch(actionCreator.removeTodoAction(id)),
+  toggleTodo: id => dispatch(actionCreator.toggleTodoAction(id)),
+  removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
+});
+
+export default connect(mapStateToProps)(App)
