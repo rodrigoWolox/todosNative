@@ -2,24 +2,26 @@ import { makeMove, jumpTo } from '../../utils/utils';
 import { cleanInfo } from '../../services/userService';
 
 export const actions = {
-  PLAY_TURN: 'PLAY_TURN',
-  JUMP_TO: 'JUMP_TO',
-  LOG_OUT: 'LOG_OUT'
+  ADD_TODO: 'ADD_TODO',
+  REMOVE_TODO: 'REMOVE_TODO',
+  TOGGLE_TODO: 'TOGGLE_TODO',
+  REMOVE_COMPLETE: 'REMOVE_COMPLETE'
 };
 
 export const actionCreator = {
-  playTurn: (values, squarePosition) => ({
-    type: actions.PLAY_TURN,
-    data: makeMove(values, squarePosition)
+  addTodoAction: todo => ({
+    type: actions.ADD_TODO,
+    payload: todo
   }),
-  jumpTo: (values, step) => ({
-    type: actions.JUMP_TO,
-    data: jumpTo(values, step)
+  removeTodoAction: id => ({
+    type: actions.REMOVE_TODO,
+    payload: id
   }),
-  logOut: dispatch => {
-    cleanInfo();
-    dispatch({
-      type: actions.LOG_OUT
-    });
-  }
+  toggleTodoAction: id => ({
+    type: actions.TOGGLE_TODO,
+    payload: id
+  }),
+  removeCompleteAction: dispatch => ({
+    type: actions.REMOVE_COMPLETE
+  })
 };

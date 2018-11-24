@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 
-import { actionCreator } from '../redux/todos/actions'
-import Title from '../components/Title'
-import Input from '../components/Input'
-import List from '../components/List'
-import Footer from '../components/Footer'
+import { actionCreator } from '../redux/todos/actions';
+import Header from '../components/Header';
+import InputText from './components/InputText';
+import TodoList from '../components/TodoList';
+import Footer from '../components/Footer';
+import styles from './styles';
 
 class Todos extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Title>Todo List</Title>
+        <Header title="Todo List" />
         <Input
           placeholder={'Enter a Todo!'}
           onSubmit={this.props.addTodo}

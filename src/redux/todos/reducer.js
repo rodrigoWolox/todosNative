@@ -8,13 +8,15 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case actions.PLAY_TURN:
+    case actions.ADD_TODO:
       return { ...state, ...action.data };
-    case actions.JUMP_TO:
+    case actions.REMOVE_TODO:
       return { ...state, ...action.data };
+    case actions.TOGGLE_TODO:
+    	return {}
+    case actions.REMOVE_COMPLETE:
+    	return {}
     default:
       return state;
   }
 }
-
-export const squarePropType = PropTypes.arrayOf(PropTypes.string);
