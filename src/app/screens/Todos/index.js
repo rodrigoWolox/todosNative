@@ -20,7 +20,7 @@ class Todos extends React.Component {
           onSubmit={this.props.addTodo}
         />
         <View style={styles.divider}/>
-        <List
+        <TodoList
           todos={this.props.todos}
           onDelete={this.removeItem}
           onToggle={this.props.toggleTodo}
@@ -37,7 +37,7 @@ Todos.propTypes = {
   addTodo: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,
   toggleTodo: PropTypes.func.isRequired,
-  removeCompleted: PropTypes.func.isRequired,
+  removeCompleted: PropTypes.func.isRequired
 }
 
 const mapsStateToProps = state => ({
@@ -51,4 +51,4 @@ const mapDispatchToProps = dispatch => ({
   removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
 });
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps, mapDispatchTtoProps)(App);
