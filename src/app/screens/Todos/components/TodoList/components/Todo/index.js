@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Checkbox from './components/Checkbox';
+import styles from './styles';
+
 
 class Todo extends React.Component {
   remove = () => this.props.onRemove(this.props.key);
 
 	render() {
 		return (
-			<View key={key} style={itemStyle}>
+			<View key={key} style={styles.todo}>
         <Text>{this.props.todo.label}</Text>
         <View style={styles.rightSection}>
           <Checkbox

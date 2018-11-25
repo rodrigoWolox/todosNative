@@ -4,9 +4,9 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native'
 import styles from './styles';
 
 const Checkbox = ({ onToggle, isChecked }) => (
-  <TouchableOpacity onPress={this.props.onToggle}>
+  <TouchableOpacity onPress={onToggle}>
     <View style={styles.box}>
-      { this.props.isChecked && <View style={styles.inner} /> }
+      { isChecked && <View style={styles.inner} /> }
     </View>
   </TouchableOpacity>
 );

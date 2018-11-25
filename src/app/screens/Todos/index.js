@@ -10,27 +10,23 @@ import TodoList from '../components/TodoList';
 import Footer from '../components/Footer';
 import styles from './styles';
 
-class Todos extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Header title="Todo List" />
-        <Input
-          placeholder={'Enter a Todo!'}
-          onSubmit={this.props.addTodo}
-        />
-        <View style={styles.divider}/>
-        <TodoList
-          todos={this.props.todos}
-          onDelete={this.removeItem}
-          onToggle={this.props.toggleTodo}
-        />
-        <View style={styles.divider} />
-        <Footer onRemoveCompleted={this.removeCompleted} />
-      </View>
-    )
-  }
-}
+const Todos = ({ todos, addTodo, removeTodo, toggleTodo, removeCompleted }) => (
+  <View style={styles.container}>
+    <Header title="Todo List" />
+    <InputText
+      placeholder={'Enter a Todo!'}
+      onSubmit={addTodo}
+    />
+    <View style={styles.divider}/>
+    <TodoList
+      todos={todos}
+      onDelete={removeTodo}
+      onToggle={toggleTodo}
+    />
+    <View style={styles.divider} />
+    <Footer onRemoveCompleted={removeCompleted} />
+  </View>
+);
 
 Todos.propTypes = {
   todos: PropTypes.array.isRequired,
@@ -38,7 +34,7 @@ Todos.propTypes = {
   removeTodo: PropTypes.func.isRequired,
   toggleTodo: PropTypes.func.isRequired,
   removeCompleted: PropTypes.func.isRequired
-}
+};
 
 const mapsStateToProps = state => ({
   todos: state.todos.todos
