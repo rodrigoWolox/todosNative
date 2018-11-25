@@ -1,22 +1,10 @@
-import React from 'react'
-import { TextInput, StyleSheet } from 'react-native'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TextInput } from 'react-native';
 
-const styles = StyleSheet.create({
-  input: {
-    height: 50,
-    padding: 15,
-  },
-})
-
-export default class Input extends React.Component {
-
-  static propTypes = {
-    onSubmit: PropTypes.func,
-    placeholder: PropTypes.string,
-  }
-
+class InputText extends React.Component {
   state = {
-    text: '',
+    text: ''
   }
 
   onChangeText = (text) => {
@@ -24,7 +12,6 @@ export default class Input extends React.Component {
   }
 
   onSubmitEditing = () => {
-    const {onSubmit} = this.props
     const {text} = this.state
 
     if (!text) return
@@ -34,13 +21,10 @@ export default class Input extends React.Component {
   }
 
   render() {
-    const {onSubmit, placeholder} = this.props
-    const {text} = this.state
-
     return (
       <TextInput
         style={styles.input}
-        placeholder={placeholder}
+        placeholder={this.props.placeholder}
         value={text}
         onChangeText={this.onChangeText}
         onSubmitEditing={this.onSubmitEditing}
@@ -49,3 +33,11 @@ export default class Input extends React.Component {
     )
   }
 }
+
+InputText.propTypes = {
+  onSubmit: PropTypes.func,
+  placeholder: PropTypes.string
+};
+
+
+export default InputText;

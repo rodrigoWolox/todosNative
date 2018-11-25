@@ -1,4 +1,4 @@
-import React from 'react';
+wimport React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
