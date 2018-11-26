@@ -16,7 +16,7 @@ class InputText extends React.Component {
 
     if (!text) return
 
-    onSubmit(text)
+    this.props.onSubmit(text)
     this.setState({text: ''})
   }
 
@@ -25,7 +25,7 @@ class InputText extends React.Component {
       <TextInput
         style={styles.input}
         placeholder={this.props.placeholder}
-        value={text}
+        value={this.state.text}
         onChangeText={this.onChangeText}
         onSubmitEditing={this.onSubmitEditing}
         blurOnSubmit={false}

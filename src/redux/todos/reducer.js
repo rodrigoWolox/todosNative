@@ -9,13 +9,13 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case actions.ADD_TODO:
-      return { ...state, ...action.data };
+      return { ...state, {label: action.payload, isChecked: false} };
     case actions.REMOVE_TODO:
-      return { ...state, ...action.data };
+      return { ...state, todos: todos.filter((todo, i) => i !== payload) };
     case actions.TOGGLE_TODO:
-    	return {}
-    case actions.REMOVE_COMPLETE:
-    	return {}
+    	return { ...state, todos: todos.map((todo, i) => if(i === payload) todo.isChecked = !todo.isChecked)};
+    case actions.REMOVE_COMPLETED:
+    	return { ...state, todos: todo.filter(todo) => !todo.isChecked };
     default:
       return state;
   }

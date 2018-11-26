@@ -5,13 +5,13 @@ export const actions = {
   ADD_TODO: 'ADD_TODO',
   REMOVE_TODO: 'REMOVE_TODO',
   TOGGLE_TODO: 'TOGGLE_TODO',
-  REMOVE_COMPLETE: 'REMOVE_COMPLETE'
+  REMOVE_COMPLETED: 'REMOVE_COMPLETED'
 };
 
 export const actionCreator = {
-  addTodoAction: todo => ({
+  addTodoAction: label => ({
     type: actions.ADD_TODO,
-    payload: todo
+    payload: label
   }),
   removeTodoAction: id => ({
     type: actions.REMOVE_TODO,
@@ -22,6 +22,6 @@ export const actionCreator = {
     payload: id
   }),
   removeCompleteAction: dispatch => ({
-    type: actions.REMOVE_COMPLETE
+    type: actions.REMOVE_COMPLETED
   })
 };

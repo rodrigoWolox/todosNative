@@ -41,7 +41,7 @@ const mapsStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  addTodo: todo => dispatch(actionCreator.addTodoAction(todo)),
+  addTodo: label => dispatch(actionCreator.addTodoAction(label)),
   removeTodo: id => dispatch(actionCreator.removeTodoAction(id)),
   toggleTodo: id => dispatch(actionCreator.toggleTodoAction(id)),
   removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
