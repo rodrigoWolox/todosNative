@@ -1,13 +1,13 @@
-wimport React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 
-import { actionCreator } from '../redux/todos/actions';
-import Header from '../components/Header';
+import { actionCreator } from '../../../redux/todos/actions';
+import Header from '../../components/Header';
 import InputText from './components/InputText';
-import TodoList from '../components/TodoList';
-import Footer from '../components/Footer';
+import TodoList from './components/TodoList';
+import Footer from './components/Footer';
 import styles from './styles';
 
 const Todos = ({ todos, addTodo, removeTodo, toggleTodo, removeCompleted }) => (
@@ -47,4 +47,4 @@ const mapDispatchToProps = dispatch => ({
   removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
 });
 
-export default connect(mapStateToProps, mapDispatchTtoProps)(App);
+export default connect(mapsStateToProps, mapDispatchToProps)(App);

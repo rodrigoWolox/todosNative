@@ -1,6 +1,3 @@
-import { makeMove, jumpTo } from '../../utils/utils';
-import { cleanInfo } from '../../services/userService';
-
 export const actions = {
   ADD_TODO: 'ADD_TODO',
   REMOVE_TODO: 'REMOVE_TODO',

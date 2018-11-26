@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
  
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   todo: {
     padding: 15,
     flexDirection: 'row',
@@ -22,6 +22,4 @@ const styles = StyleSheet.create({
   completed: {
     backgroundColor: 'whitesmoke'
   }
-})
-
-export ddefault styles;
+});
