@@ -47,4 +47,4 @@ const mapDispatchToProps = dispatch => ({
   removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
 });
 
-export default connect(mapsStateToProps, mapDispatchToProps)(App);
+export default connect(mapsStateToProps, mapDispatchToProps)(Todos);

@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { View, TouchableOpacity, Text } from 'react-native';
 
-import Checkbox from './components/Checkbox';
+import CheckBox from './components/CheckBox';
 import styles from './styles';
 
-
 class Todo extends React.Component {
-  remove = () => this.props.onRemove(this.props.key);
+  remove = () => this.props.onRemove(this.props.id);
+  toggle = () => this.props.onToggle(this.props.id);
 
 	render() {
 		return (
-			<View key={key} style={styles.todo}>
-        <Text>{this.props.todo.label}</Text>
+			<View key={this.props.id} style={styles.todo}>
+        <Text>{this.props.label}</Text>
         <View style={styles.rightSection}>
-          <Checkbox
-            isChecked={this.props.todo.isChecked}
-            onToggle={this.props.onToggle}
+          <CheckBox
+            isChecked={this.props.isChecked}
+            onToggle={this.toggle}
           />
           <TouchableOpacity onPress={this.remove}>
             <Text style={styles.remove}> &times; </Text>
@@ -27,9 +28,9 @@ class Todo extends React.Component {
 }
 
 Todo.propTypes = {
-  key: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   onRemove: PropTypes.func.isRequired,
-  onToggle: PropTypes.func.isReuired,
+  onToggle: PropTypes.func.isRequired,
   todo: PropTypes.object
 }
 

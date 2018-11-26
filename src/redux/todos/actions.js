@@ -18,7 +18,7 @@ export const actionCreator = {
     type: actions.TOGGLE_TODO,
     payload: id
   }),
-  removeCompleteAction: dispatch => ({
-    type: actions.REMOVE_COMPLETED
-  })
+  removeCompletedAction: () => {
+    return { type: actions.REMOVE_COMPLETED }
+  }
 };

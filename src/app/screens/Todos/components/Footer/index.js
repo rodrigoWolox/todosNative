@@ -14,5 +14,4 @@ Footer.propTypes = {
   onRemoveCompleted: PropTypes.func
 };
 
-
 export default Footer;

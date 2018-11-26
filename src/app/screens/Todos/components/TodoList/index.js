@@ -1,25 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView } from 'react-native';
+import Todo from './components/Todo';
 
 import styles from './styles';
 
 class TodoList extends React.Component {
   renderTodo = (todo, i) => {
-    return <Todo
-      key={i} 
-      todo={todo}
-      onToggle={this.props.onToggle} 
-      onRemove={this.props.onDelete}
-    />
+    return (
+      <Todo
+        id={i}
+        key={i}
+        label={todo.label}
+        isChecked={todo.isChecked}
+        onToggle={this.props.onToggle} 
+        onRemove={this.props.onDelete}
+      />
+    )
   }
 
   render() {
     return (
       <ScrollView style={styles.container}>
-        {todos.map(this.renderTodo)}
+        {this.props.todos.map(this.renderTodo)}
       </ScrollView>
-    )
+    );
   }
 }
 

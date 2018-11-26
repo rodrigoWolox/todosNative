@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInput } from 'react-native';
 
+import styles from './styles';
+
 class InputText extends React.Component {
   state = {
     text: ''
