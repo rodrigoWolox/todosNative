@@ -11,7 +11,7 @@ const Footer = ({ onRemoveCompleted }) => (
 );
 
 Footer.propTypes = {
-  onRemoveCompleted: PropTypes.func
+  onRemoveCompleted: PropTypes.func.isRequired
 };
 
 export default Footer;

@@ -35,8 +35,8 @@ class InputText extends React.Component {
 }
 
 InputText.propTypes = {
-  onSubmit: PropTypes.func,
-  placeholder: PropTypes.string
+  onSubmit: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired
 };
 
 
