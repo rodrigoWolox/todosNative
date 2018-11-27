@@ -1,4 +1,7 @@
 {
   "name": "todos",
-  "displayName": "todos"
+  "displayName": "todos",
+  "expo": { 
+  	"sdkVersion": "18.0.0" 
+}
 }
