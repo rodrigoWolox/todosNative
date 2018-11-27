@@ -4,13 +4,14 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 import { actionCreator } from '../../../redux/todos/actions';
+import { todoPropType } from '../../../redux/todos/reducer';
+import Footer from './components/Footer';
 import Header from '../../components/Header';
 import InputText from './components/InputText';
 import TodoList from './components/TodoList';
-import Footer from './components/Footer';
 import styles from './styles';
 
-const Todos = ({ todos, addTodo, removeTodo, toggleTodo, removeCompleted }) => (
+const Todos = ({ addTodo, removeCompleted, removeTodo,  todos, toggleTodo }) => (
   <View style={styles.container}>
     <Header title="Todo List" />
     <InputText
@@ -29,11 +30,11 @@ const Todos = ({ todos, addTodo, removeTodo, toggleTodo, removeCompleted }) => (
 );
 
 Todos.propTypes = {
-  todos: PropTypes.array.isRequired,
   addTodo: PropTypes.func.isRequired,
+  removeCompleted: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,
-  toggleTodo: PropTypes.func.isRequired,
-  removeCompleted: PropTypes.func.isRequired
+  todos: PropTypes.arrayOf(todoPropType).isRequired,
+  toggleTodo: PropTypes.func.isRequired
 };
 
 const mapsStateToProps = state => ({
@@ -42,9 +43,9 @@ const mapsStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addTodo: label => dispatch(actionCreator.addTodoAction(label)),
-  removeTodo: id => dispatch(actionCreator.removeTodoAction(id)),
   toggleTodo: id => dispatch(actionCreator.toggleTodoAction(id)),
-  removeCompleted: () => dispatch(actionCreator.removeCompletedAction())
+  removeCompleted: () => dispatch(actionCreator.removeCompletedAction()),
+  removeTodo: id => dispatch(actionCreator.removeTodoAction(id))
 });
 
 export default connect(mapsStateToProps, mapDispatchToProps)(Todos);

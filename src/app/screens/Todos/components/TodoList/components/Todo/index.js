@@ -29,9 +29,10 @@ class Todo extends React.Component {
 
 Todo.propTypes = {
   id: PropTypes.number.isRequired,
+  isChecked: PropTypes.bool.isRequired,
+  label: propTypes.string.isRequired,
   onRemove: PropTypes.func.isRequired,
   onToggle: PropTypes.func.isRequired,
-  todo: PropTypes.object
 }
 
 export default Todo;

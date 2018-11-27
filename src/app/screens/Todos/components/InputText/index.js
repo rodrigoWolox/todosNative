@@ -14,12 +14,10 @@ class InputText extends React.Component {
   }
 
   onSubmitEditing = () => {
-    const {text} = this.state
-
-    if (!text) return
-
-    this.props.onSubmit(text)
-    this.setState({text: ''})
+    if (this.state.text) {
+      this.props.onSubmit(this.state.text);
+      this.setState({text: ''});
+    };
   }
 
   render() {

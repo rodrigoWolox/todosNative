@@ -10,9 +10,9 @@ class TodoList extends React.Component {
     return (
       <Todo
         id={i}
+        isChecked={todo.isChecked}
         key={i}
         label={todo.label}
-        isChecked={todo.isChecked}
         onToggle={this.props.onToggle} 
         onRemove={this.props.onDelete}
       />
@@ -29,9 +29,9 @@ class TodoList extends React.Component {
 }
 
 TodoList.propTypes = {
-  todos: PropTypes.array.isRequired,
   onDelete: PropTypes.func.isRequired,
   onToggle: PropTypes.func.isRequired,
+  todos: PropTypes.arrayOf(todoPropType).isRequired
 }
 
 export default TodoList;

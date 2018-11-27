@@ -2,13 +2,15 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'skyblue',
-    padding: 15
+    backgroundColor: 'coral',
+    padding: 15  
   },
   title: {
     textAlign: 'center',
-    color: 'white'
-  },
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 15
+  }
 })
 
 export default styles;

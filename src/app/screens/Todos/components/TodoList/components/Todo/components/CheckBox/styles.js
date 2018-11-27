@@ -7,11 +7,13 @@ export default StyleSheet.create({
     borderWidth: 2,
     borderColor: 'black',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    borderRadius: 100/2
   },
   inner: {
     height: 13,
     width: 13,
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+    borderRadius: 80/2
   }
 });

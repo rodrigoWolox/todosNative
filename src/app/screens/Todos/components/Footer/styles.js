@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     bottom: 0
   },
   remove: {
-    color: '#CD5C5C'
+    color: '#CD5C5C',
+    fontSize: 15
   }
 })
 
