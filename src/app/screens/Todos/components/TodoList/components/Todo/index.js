@@ -6,7 +6,7 @@ import CheckBox from './components/CheckBox';
 import styles from './styles';
 
 class Todo extends React.Component {
-  remove = () => this.props.onRemove(this.props.id);
+  handlePress = () => this.props.onRemove(this.props.id);
   
 	render() {
 		return (
@@ -17,7 +17,7 @@ class Todo extends React.Component {
             isChecked={this.props.isChecked}
             onToggle={this.props.onToggle}
           />
-          <TouchableOpacity onPress={this.remove}>
+          <TouchableOpacity onPress={this.handlePress}>
             <Text style={styles.remove}> &times; </Text>
           </TouchableOpacity>
         </View>
