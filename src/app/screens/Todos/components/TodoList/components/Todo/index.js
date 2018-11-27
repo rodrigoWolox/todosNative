@@ -6,7 +6,7 @@ import CheckBox from './components/CheckBox';
 import styles from './styles';
 
 class Todo extends React.Component {
-  handlePress = () => this.props.onRemove(this.props.id);
+  handleRemove = () => this.props.onRemove(this.props.id);
   
 	render() {
 		return (
@@ -14,10 +14,11 @@ class Todo extends React.Component {
         <Text>{this.props.label}</Text>
         <View style={styles.rightSection}>
           <CheckBox
+            id={this.props.id}
             isChecked={this.props.isChecked}
             onToggle={this.props.onToggle}
           />
-          <TouchableOpacity onPress={this.handlePress}>
+          <TouchableOpacity onPress={this.handleRemove}>
             <Text style={styles.remove}> &times; </Text>
           </TouchableOpacity>
         </View>
@@ -29,7 +30,7 @@ class Todo extends React.Component {
 Todo.propTypes = {
   id: PropTypes.number.isRequired,
   isChecked: PropTypes.bool.isRequired,
-  label: propTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   onRemove: PropTypes.func.isRequired,
   onToggle: PropTypes.func.isRequired,
 }

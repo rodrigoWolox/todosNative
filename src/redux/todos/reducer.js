@@ -29,6 +29,4 @@ export default function reducer(state = initialState, action) {
 export const todosPropType = PropTypes.shape({
   isChecked: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
-  onToggle: PropTypes.func.isRequired,
-  onRemove: PropTypes.func.isRequired
 });

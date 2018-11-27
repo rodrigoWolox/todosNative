@@ -4,11 +4,11 @@ import { View, TouchableOpacity } from 'react-native'
 import styles from './styles';
 
 class CheckBox extends React.Component {
-	handlePress = () => this.props.onToggle(this.props.id);
+	handleToggle = () => this.props.onToggle(this.props.id);
 		
 	render() {
 		return (
-			<TouchableOpacity onPress={handlePress}>
+			<TouchableOpacity onPress={this.handleToggle}>
 			  <View style={styles.box}>
 			    { this.props.isChecked && <View style={styles.inner} /> }
 			  </View>

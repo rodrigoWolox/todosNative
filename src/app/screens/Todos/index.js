@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 
 import { actionCreator } from '../../../redux/todos/actions';
-import { todoPropType } from '../../../redux/todos/reducer';
+import { todosPropType } from '../../../redux/todos/reducer';
 import Footer from './components/Footer';
 import Header from '../../components/Header';
 import InputText from './components/InputText';
@@ -33,7 +33,7 @@ Todos.propTypes = {
   addTodo: PropTypes.func.isRequired,
   removeCompleted: PropTypes.func.isRequired,
   removeTodo: PropTypes.func.isRequired,
-  todos: PropTypes.arrayOf(todoPropType).isRequired,
+  todos: PropTypes.arrayOf(todosPropType).isRequired,
   toggleTodo: PropTypes.func.isRequired
 };
 
