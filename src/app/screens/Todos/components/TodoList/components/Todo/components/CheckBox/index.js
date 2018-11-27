@@ -3,15 +3,22 @@ import PropTypes from 'prop-types';
 import { View, TouchableOpacity } from 'react-native'
 import styles from './styles';
 
-const CheckBox = ({ onToggle, isChecked }) => (
-  <TouchableOpacity onPress={onToggle}>
-    <View style={styles.box}>
-      { isChecked && <View style={styles.inner} /> }
-    </View>
-  </TouchableOpacity>
-);
+class CheckBox extends React.Component {
+	toggle = () => this.props.onToggle(this.props.id);
+		
+	render() {
+		return (
+			<TouchableOpacity onPress={toggle}>
+			  <View style={styles.box}>
+			    { this.props.isChecked && <View style={styles.inner} /> }
+			  </View>
+			</TouchableOpacity>
+		)
+	}
+} 
 
 CheckBox.propTypes = {
+  id: PropTypes.number,
   onToggle: PropTypes.func,
   isChecked: PropTypes.bool
 }
