@@ -7,8 +7,7 @@ import styles from './styles';
 
 class Todo extends React.Component {
   remove = () => this.props.onRemove(this.props.id);
-  toggle = () => this.props.onToggle(this.props.id);
-
+  
 	render() {
 		return (
 			<View key={this.props.id} style={styles.todo}>
@@ -16,7 +15,7 @@ class Todo extends React.Component {
         <View style={styles.rightSection}>
           <CheckBox
             isChecked={this.props.isChecked}
-            onToggle={this.toggle}
+            onToggle={this.props.onToggle}
           />
           <TouchableOpacity onPress={this.remove}>
             <Text style={styles.remove}> &times; </Text>
