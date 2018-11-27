@@ -1,5 +1,8 @@
 import React from 'react';
-import AppNavigator from './screens';
+import { createAppContainer } from 'react-navigation';
+import StackNavigator from './screens';
+
+const AppContainer = createAppContainer(StackNavigator);
 
 export default class App extends React.Component {
   render() {
