@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
-import { connect } from 'react-redux';
 import styles from './styles';
 
 const Books = () => (
@@ -11,4 +9,4 @@ const Books = () => (
   </View>
 );
 
-export default connect()(Books);
+export default Books;

@@ -1,7 +1,5 @@
 import React from 'react';
 import { View, Button } from 'react-native';
-import { NavigationActions } from 'react-navigation';
-import { connect } from 'react-redux';
 
 const HeaderRight = ({ navigation }) => (
   <View>
@@ -12,6 +10,4 @@ const HeaderRight = ({ navigation }) => (
   </View>
 );
 
-export default connect()(HeaderRight);
-
-//() => this.props.dispatch(NavigationActions.navigate({routeName: 'Books'}))
+export default HeaderRight;
