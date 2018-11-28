@@ -1,6 +1,6 @@
-export const BORDER_WIDTH = 2;
-export const INNER_CHECKBOX = 13;
-export const INPUT_HEIGHT = 50;
-export const MARGIN_LEFT = 10;
-export const MED_PADDING = 15;
-export const OUTER_CHECKBOX = 20;
+exports.borderWidth = 2;
+exports.innerCheckbox = 13;
+exports.inputHeight = 50;
+exports.marginLeft = 10;
+exports.medPadding = 15;
+exports.outerCheckbox = 20;

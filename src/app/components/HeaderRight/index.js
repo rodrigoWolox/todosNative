@@ -1,15 +1,23 @@
 import React from 'react';
 import { View, Button } from 'react-native';
 import styles from './styles';
+import { NavigationActions } from 'react-navigation';
 
-const HeaderRight = () => (
-  <View>
-    {alert(JSON.stringify(this.props, null, 2))}
-    <Button
-      title="Books ->"
-      onPress={() => this.props.navigation.navigate('Books')}
-    />
-  </View>
-);
+class HeaderRight extends React.Component {
+  openBookList = () => this.props.navigation.navigate('Books');
+
+  render() {
+    return (
+      <View>
+        <Button
+          title="Books ->"
+          onPress={this.openBookList}
+        />
+      </View>
+    )
+  }
+}
 
 export default HeaderRight;
+
+//() => this.props.dispatch(NavigationActions.navigate({routeName: 'Books'}))

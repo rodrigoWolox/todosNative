@@ -1,10 +1,10 @@
 import React from 'react';
 import HeaderRight from './components/HeaderRight';
 
-export function Todos() {
+export function Todos({ navigation }) {
   return {
     title: 'Todo List',
-    headerRight: <HeaderRight />
+    headerRight: <HeaderRight navigation={navigation} />,
   }
 }
 

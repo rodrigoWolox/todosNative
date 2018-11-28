@@ -1,4 +1,3 @@
-export const BLACK = '#000000';
-export const CORAL = '#ff7f50';
-export const INDIAN_RED = '#cd5c5c';
-export const WHITE = '#ffffff';
+exports.black = '#000000';
+exports.coral = '#ff7f50';
+exports.white = '#ffffff';

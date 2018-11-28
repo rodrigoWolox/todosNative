@@ -1,13 +1,15 @@
 import { StyleSheet } from 'react-native';
+import { white } from '../../../constants/colors';
+import { largeSize } from '../../../constants/fonts';
 
 export default StyleSheet.create({
   container: {
     alignContent: 'space-between',
-		backgroundColor: colors.WHITE,
+		backgroundColor: white,
     flex: 1,
     justifyContent: 'center'
   },
   header: {
-    fontSize: fonts.LARGE_SIZE
+    fontSize: largeSize
   }
 });

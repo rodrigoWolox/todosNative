@@ -1,19 +1,25 @@
 import { StyleSheet } from 'react-native';
+import { 
+  borderWidth, 
+  outerCheckbox, 
+  innerCheckbox 
+} from '../../../../../../../../../constants/dimentions';
+import { black } from '../../../../../../../../../constants/colors';
 
 export default StyleSheet.create({
   box: {
     alignItems: 'center',
-    borderColor: colors.BLACK,
-    borderRadius: 100/2
-    borderWidth: dimentions.BORDER_WIDTH,
-    height: dimentions.OUTER_CHECKBOX,
+    borderColor: black,
+    borderRadius: 100/2,
+    borderWidth: borderWidth,
+    height: outerCheckbox,
     justifyContent: 'center',
-    width: dimentions.OUTER_CHECKBOX
+    width: outerCheckbox
   },
   inner: {
-    backgroundColor: colors.BLACK,
+    backgroundColor: black,
     borderRadius: 80/2,
-    height: dimentions.INNER_CHECKBOX,
-    width: dimentions.INNER_CHECKBOX
+    height: innerCheckbox,
+    width: innerCheckbox
   }
 });

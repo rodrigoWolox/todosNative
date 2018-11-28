@@ -1,2 +1,2 @@
-export const MED_SIZE = 15;
-export const LARGE_SIZE = 30;
+exports.medSize = 15;
+exports.largeSize = 30;

@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { * as colors } from '../../constants/colors';
+import { coral } from '../../../constants/colors';
+import { medPadding } from '../../../constants/dimentions';
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: colors.CORAL,
-    padding: dimentions.MED_PADDING
+    backgroundColor: coral,
+    padding: medPadding
   }
 })
 

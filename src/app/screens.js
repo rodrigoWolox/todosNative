@@ -14,14 +14,16 @@ export default createStackNavigator(
       screen: Todos,
       navigationOptions: navigationOptions.Todos
     }
-  }, {
+  }, 
+  {
     defaultNavigationOptions: {
       headerTintColor: '#fff',
       headerStyle: {
         backgroundColor: '#000'
       }
     }
-  }, {
+  }, 
+  {
     initialRouteName: [Routes.Todos]
   } 
 );
