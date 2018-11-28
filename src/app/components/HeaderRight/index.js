@@ -6,8 +6,8 @@ import { actionCreator } from '../../../redux/books/actions';
 class HeaderRight extends React.Component {
 
   handlePress = () => {
-    this.props.dispatch(actionCreator.fetchBooks());
-    this.props.dispatch(this.props.navigation.navigate('Books'))
+    this.props.dispatch(actionCreator.getBooks());
+    this.props.navigation.navigate('Books');
   }
 
   render() {
@@ -23,5 +23,3 @@ class HeaderRight extends React.Component {
 }
 
 export default connect()(HeaderRight);
-
-//() => this.props.dispatch(NavigationActions.navigate({routeName: 'Books'}))

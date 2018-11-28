@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { View } from 'react-native';
-import withLoading from '../../components/HOC';
+import withLoading from '../../components/HOC/WithLoading';
 import BookList from './components/BookList';
 
 const BooksWithLoading = withLoading(BookList);
@@ -12,9 +11,9 @@ const Books = ({ books, isLoading, loadFail }) => (
   <BooksWithLoading books={books} isLoading={isLoading} loadFail={loadFail} />
 );
 
-Books.propTypes = {
+/* Books.propTypes = {
   books: PropTypes.arrayOf()
-};
+}; */
 
 const mapStateToProps = state => ({
   books: state.books.books,

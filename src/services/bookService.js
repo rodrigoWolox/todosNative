@@ -4,4 +4,4 @@ const BookService = {
   getBooks: () => api.get('/books/')
 };
 
-export { BookService };
+export default BookService;
