@@ -10,7 +10,7 @@ export const actionCreator = {
   getBooks: () => async dispatch => {
     dispatch({ type: actions.GET_BOOKS });
     const response = await BookService.getBooks();
-    alert(JSON.stringify(response.data, null, 2));
+    //alert(JSON.stringify(response, null, 2));
     if(response.ok && response.data.length > 0) {
       dispatch({
         type: actions.GET_BOOKS_SUCCESS,

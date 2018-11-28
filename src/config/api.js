@@ -1,5 +1,5 @@
 import { create } from 'apisauce';
-
+//alert(JSON.stringify(process.env, null, 2));
 const api = create({
   baseURL: process.env.REACT_APP_API_BASE_URL,
   timeout: 5000

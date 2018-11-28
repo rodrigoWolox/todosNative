@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Image, ScrollView, Text , View } from 'react-native';
-import Book from './components/Book';
+import { Image, Text , View } from 'react-native';
 import styles from './styles';
 
 const BookList = ({ author, id, imageUrl, title }) => (  
