@@ -15,9 +15,15 @@ class BookList extends React.Component {
 
   render() {
     return (
-      <ScrollView>
-        {this.props.books.map(this.renderBook)}
-      </ScrollView>
+      <View styles={styles.container}>
+        {loginFail ? 
+          <h3>Nothing to see here!</h3> 
+            : 
+          <ScrollView>
+            {this.props.books.map(this.renderBook)}
+          </ScrollView>
+        }
+      </View>
     );
   }
 }
