@@ -1,25 +1,22 @@
 import { StyleSheet } from 'react-native';
  
 export default StyleSheet.create({
-  todo: {
-    padding: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: 'whitesmoke'
+  remove: {
+    color: colors.INDIAN_RED,
+    fontSize: fonts.LARGE_SIZE,
+    marginBottom: 2,
+    marginLeft: dimentions.MARGIN_LEFT
   },
   rightSection: {
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  todo: {
+    alignItems: 'center',
+    borderBottomColor: colors.WHITE_SMOKE,
+    borderBottomWidth: 1,
     flexDirection: 'row',
-    alignItems: 'center'
-  },
-  remove: {
-    marginLeft: 10,
-    marginBottom: 2,
-    color: '#CD5C5C',
-    fontSize: 26
-  },
-  completed: {
-    backgroundColor: 'whitesmoke'
+    justifyContent: 'space-between',
+    padding: dimentions.MED_PADDING
   }
 });

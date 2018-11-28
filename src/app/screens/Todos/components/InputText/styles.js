@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   input: {
-    height: 50,
-    padding: 15,
-    borderBottomWidth: 2
+    borderBottomWidth: 2,
+    height: dimentions.INPUT_HEIGHT,
+    padding: dimentions.MED_PADDING
   }
 });

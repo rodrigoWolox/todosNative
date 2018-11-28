@@ -22,7 +22,7 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView>
         {this.props.todos.map(this.renderTodo)}
       </ScrollView>
     );

@@ -2,12 +2,12 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
     alignContent: 'space-between',
+		backgroundColor: colors.WHITE,
+    flex: 1,
     justifyContent: 'center'
   },
   header: {
-    fontSize: 30
+    fontSize: fonts.LARGE_SIZE
   }
 });

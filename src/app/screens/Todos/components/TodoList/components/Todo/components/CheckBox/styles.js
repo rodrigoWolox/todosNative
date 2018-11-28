@@ -2,18 +2,18 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   box: {
-    height: 20,
-    width: 20,
-    borderWidth: 2,
-    borderColor: 'black',
-    justifyContent: 'center',
     alignItems: 'center',
+    borderColor: colors.BLACK,
     borderRadius: 100/2
+    borderWidth: dimentions.BORDER_WIDTH,
+    height: dimentions.OUTER_CHECKBOX,
+    justifyContent: 'center',
+    width: dimentions.OUTER_CHECKBOX
   },
   inner: {
-    height: 13,
-    width: 13,
-    backgroundColor: 'black',
-    borderRadius: 80/2
+    backgroundColor: colors.BLACK,
+    borderRadius: 80/2,
+    height: dimentions.INNER_CHECKBOX,
+    width: dimentions.INNER_CHECKBOX
   }
 });

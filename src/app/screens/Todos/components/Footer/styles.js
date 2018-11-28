@@ -2,13 +2,13 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   footer: {
-    paddingVertical: 15,
     alignItems: 'center',
-    bottom: 0
+    bottom: 0,
+    paddingVertical: dimentions.MED_PADDING
   },
   remove: {
-    color: '#CD5C5C',
-    fontSize: 15
+    color: colors.INDIAN_RED,
+    fontSize: fonts.MED_SIZE
   }
 })
 
