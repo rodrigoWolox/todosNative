@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, View, Text } from 'react-native';
 import Book from './components/Book';
+import { booksPropType } from '../../../../../redux/books/reducer';
+
 import styles from './styles';
 
 class BookList extends React.Component {
@@ -29,8 +31,9 @@ class BookList extends React.Component {
   }
 }
 
-/* BookList.propTypes = {
-  books: PropTypes.arrayOf()
-} */
+BookList.propTypes = {
+  books: PropTypes.arrayOf(booksPropType).isRequired,
+  loadFail: PropTypes.bool.isRequired
+}
 
 export default BookList;
