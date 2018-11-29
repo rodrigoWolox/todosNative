@@ -4,9 +4,9 @@ import { largeSize } from '../../../constants/fonts';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: white,
     alignContent: 'space-between',
+		backgroundColor: white,
+    flex: 1,
     justifyContent: 'center'
   },
   header: {

@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { inputHeight, medPadding } from '../../../../../constants/dimentions';
 
 export default StyleSheet.create({
   input: {
-    height: 50,
-    padding: 15,
-    borderBottomWidth: 2
+    borderBottomWidth: 2,
+    height: inputHeight,
+    padding: medPadding
   }
 });

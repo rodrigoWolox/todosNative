@@ -1,25 +1,25 @@
 import { StyleSheet } from 'react-native';
- 
+import { largeSize } from '../../../../../../../constants/fonts';
+import { coral, white } from '../../../../../../../constants/colors';
+import { marginLeft, medPadding } from '../../../../../../../constants/dimentions';
+
 export default StyleSheet.create({
-  todo: {
-    padding: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: 'whitesmoke'
+  remove: {
+    color: coral,
+    fontSize: largeSize,
+    marginBottom: 2,
+    marginLeft: marginLeft
   },
   rightSection: {
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  todo: {
+    alignItems: 'center',
+    borderBottomColor: white,
+    borderBottomWidth: 1,
     flexDirection: 'row',
-    alignItems: 'center'
-  },
-  remove: {
-    marginLeft: 10,
-    marginBottom: 2,
-    color: '#CD5C5C',
-    fontSize: 26
-  },
-  completed: {
-    backgroundColor: 'whitesmoke'
+    justifyContent: 'space-between',
+    padding: medPadding
   }
 });

@@ -1,14 +1,17 @@
 import { StyleSheet } from 'react-native';
+import { medPadding } from '../../../../../constants/dimentions';
+import { coral } from '../../../../../constants/colors';
+import { medSize } from '../../../../../constants/fonts';
 
 const styles = StyleSheet.create({
   footer: {
-    paddingVertical: 15,
     alignItems: 'center',
-    bottom: 0
+    bottom: 0,
+    paddingVertical: medPadding
   },
   remove: {
-    color: '#CD5C5C',
-    fontSize: 15
+    color: coral,
+    fontSize: medSize
   }
 })
 
