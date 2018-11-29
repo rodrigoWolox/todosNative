@@ -18,7 +18,7 @@ export default StyleSheet.create({
   },
   inner: {
     backgroundColor: black,
-    borderRadius: 80/2,
+    borderRadius: 100/2,
     height: innerCheckbox,
     width: innerCheckbox
   }

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { white } from '../../../constants/colors';
-import { largeSize } from '../../../constants/fonts';
+import { white } from '../../../../../constants/colors';
+import { largeSize } from '../../../../../constants/fonts';
 
 export default StyleSheet.create({
   container: {
@@ -8,8 +8,5 @@ export default StyleSheet.create({
 		backgroundColor: white,
     flex: 1,
     justifyContent: 'center'
-  },
-  header: {
-    fontSize: largeSize
   }
 });

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Button } from 'react-native';
+import { View } from 'react-native';
 import { connect } from 'react-redux';
-import { NavigationActions } from 'react-navigation';
 import { actionCreator } from '../../../redux/todos/actions';
 import { todosPropType } from '../../../redux/todos/reducer';
 import Footer from './components/Footer';
