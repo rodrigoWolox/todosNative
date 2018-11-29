@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { black, lightgrey } from '../../../../../../../constants/colors';
-import { borderWidth, medPadding } from '../../../../../../../constants/dimentions';
+import { borderWidth, medPadding, miniBookImg } from '../../../../../../../constants/dimentions';
 
 export default StyleSheet.create({
   book: {
@@ -13,8 +13,8 @@ export default StyleSheet.create({
     borderRadius: 100/2,
     borderColor: black,
     borderWidth: borderWidth,
-    height: 70,
-    width: 70,
+    height: miniBookImg,
+    width: miniBookImg,
     backgroundColor: lightgrey
   },
   bookTitle: {
