@@ -13,3 +13,9 @@ export function Books() {
     title: 'Book List'
   }
 }
+
+export function Details() {
+  return {
+    title: 'Book Details'
+  }
+}

@@ -6,10 +6,10 @@ import styles from './styles';
 
 const Details = ({ author, imageUri, title }) => (
   <View style={styles.container}>
-    <View style={styles.imgContainer}>
+    <View style={styles.sectionContainer}>
       <Image style={styles.image} source={{ uri: imageUri }} />
     </View>  
-    <View style={styles.infoContainer}>
+    <View style={styles.sectionContainer}>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.author}>{author}</Text>
     </View>
