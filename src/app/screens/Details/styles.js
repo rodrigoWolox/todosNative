@@ -9,7 +9,7 @@ export default StyleSheet.create({
     alignContent: 'space-between',
     justifyContent: 'space-evenly'
   },
-  infoContainer: {
+  sectionContainer: {
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -20,10 +20,6 @@ export default StyleSheet.create({
     height: largeBookImg,
     width: largeBookImg,
     backgroundColor: lightgrey
-  },
-  imgContainer: {
-    alignItems: 'center',
-    justifyContent: 'center'
   },
   title: {
     fontWeight: 'bold',
