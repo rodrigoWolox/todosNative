@@ -2,7 +2,7 @@ import React from 'react';
 import { ActivityIndicator } from 'react-native';
 
 const withLoading = Component => props => (props.isLoading ? 
-  <ActivityIndicator size='small' /> 
+  <ActivityIndicator size='large' /> 
   : 
   <Component {...props} 
 />);

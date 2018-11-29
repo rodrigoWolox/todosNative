@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { coral } from '../../../constants/colors';
+import { white, black } from '../../../constants/colors';
 import { medPadding } from '../../../constants/dimentions';
 
 const styles = StyleSheet.create({
-  header: {
-    backgroundColor: coral,
+  headerRight: {
+    marginRight: 15,
     padding: medPadding
   }
 })

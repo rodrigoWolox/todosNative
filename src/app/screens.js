@@ -3,7 +3,7 @@ import * as Routes from '../constants/routes';
 import * as navigationOptions from './navigationOptions';
 import Todos from './screens/Todos';
 import Books from './screens/Books';
-import { white, black } from '../constants/colors';
+import { black, white } from '../constants/colors';
 
 export default createStackNavigator(
   {
@@ -18,9 +18,9 @@ export default createStackNavigator(
   }, 
   {
     defaultNavigationOptions: {
-      headerTintColor: white,
+      headerTintColor: black,
       headerStyle: {
-        backgroundColor: black
+        backgroundColor: white
       }
     }
   } 

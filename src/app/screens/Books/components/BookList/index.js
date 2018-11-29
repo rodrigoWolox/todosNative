@@ -8,12 +8,15 @@ import styles from './styles';
 
 class BookList extends React.Component {
   renderBook = (book, i) => {
-    <Book
-      id={id}
-      title={book.title}
-      author={book.author}
-      imageUrl={book.image_url}
-    />
+    return (
+      <Book
+        author={book.author}
+        id={i}
+        imageUri={book.image_url}
+        key={i}
+        title={book.title}
+      />
+    )
   }
 
   render() {

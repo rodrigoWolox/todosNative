@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Button } from 'react-native';
 import { connect } from 'react-redux';
 import { actionCreator } from '../../../redux/books/actions';
+import styles from './styles';
 
 class HeaderRight extends React.Component {
 
@@ -12,7 +13,7 @@ class HeaderRight extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.headerRight}>
         <Button
           title="Books ->"
           onPress={this.handlePress}

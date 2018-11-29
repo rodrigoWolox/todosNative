@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action) {
     case actions.GET_BOOKS_FAILURE:
       return { ...state, isLoading: false, loadFail: true };
     case actions.GET_BOOKS_SUCCESS:
-      return { ...state, books: action.payload, isLoading: false, loadFail: true }
+      return { ...state, books: action.payload, isLoading: false, loadFail: false }
     default: 
       return state;
   }

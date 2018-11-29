@@ -1,21 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "books" : [
     {
        "id":1,
@@ -65,7 +48,7 @@
     {
        "id":6,
        "author":"Paula Hawkins",
-       "title":"The Girl on the Train\n",
+       "title":"The Girl on the Train",
        "genre":"suspense",
        "publisher":"Riverhead Books",
        "year":"2015",
