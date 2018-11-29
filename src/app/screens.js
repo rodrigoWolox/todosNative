@@ -3,6 +3,7 @@ import * as Routes from '../constants/routes';
 import * as navigationOptions from './navigationOptions';
 import Todos from './screens/Todos';
 import Books from './screens/Books';
+import { white, black } from '../constants/colors';
 
 export default createStackNavigator(
   {
@@ -17,13 +18,10 @@ export default createStackNavigator(
   }, 
   {
     defaultNavigationOptions: {
-      headerTintColor: '#fff',
+      headerTintColor: white,
       headerStyle: {
-        backgroundColor: '#000'
+        backgroundColor: black
       }
     }
-  }, 
-  {
-    initialRouteName: [Routes.Todos]
   } 
 );
