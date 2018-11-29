@@ -11,8 +11,12 @@ const BookList = ({ author, id, imageUrl, title }) => (
   </View>
 )
 
-/* BookList.propTypes = {
-  books: PropTypes.arrayOf()
-} */
+BookList.propTypes = {
+  author: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(),
+  id: PropTypes.number.isRequired,
+  imagelUrl: PropTypes.string,
+  title: PropTypes.string.isRequired
+}
 
 export default BookList;
