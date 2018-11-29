@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { medPadding } from '../../../constants/dimentions';
+import { medPadding, marginRight } from '../../../constants/dimentions';
 
 const styles = StyleSheet.create({
   headerRight: {
-    marginRight: 15,
+    marginRight: marginRight,
     padding: medPadding
   }
 })
